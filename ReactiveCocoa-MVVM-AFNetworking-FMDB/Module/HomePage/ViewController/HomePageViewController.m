@@ -23,15 +23,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+ 
+//    [self setupTableView];
     [self sendRequest];
+}
+
+- (void)setupTableView {
+    
+    [self.tableView registerClass:[HomePageCell class] forCellReuseIdentifier:@"cell"];
 }
 
 - (void)sendRequest {
     
+    @weakify(self);
     [self.viewModel.requestSignal subscribeNext:^(NSArray *articles) {
         
-        
+        @strongify(self);
+        [self.tableView reloadData];
     } error:^(NSError *error) {
         
         
@@ -42,19 +50,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HomePageCell *cell = [tableView dequeueReusableCellWithIdentifier:@""];
+    HomePageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     [self configCell:cell indexPath:indexPath];
     return cell;
 }
 
 - (void)configCell:(HomePageCell *)cell indexPath:(NSIndexPath *)indexPath {
     
-//    cell.viewModel = 
+    cell.viewModel = self.viewModel.dataSource[indexPath.row];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.viewModel.articles.count;
+    return self.viewModel.dataSource.count;
 }
 
 #pragma mark - Lazy Load

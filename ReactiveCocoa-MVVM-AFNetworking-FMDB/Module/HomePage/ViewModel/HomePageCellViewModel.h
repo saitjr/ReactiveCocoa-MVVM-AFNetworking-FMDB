@@ -7,11 +7,14 @@
 //
 
 #import "BaseViewModel.h"
+#import "ArticleModel.h"
 
 @interface HomePageCellViewModel : BaseViewModel
 
-@property (copy, nonatomic) NSString *titleText;
-@property (copy, nonatomic) NSString *authorText;
-@property (copy, nonatomic) NSString *categoyrText;
+- (instancetype)initWithArticleModel:(ArticleModel *)articleModel;
+
+@property (copy, nonatomic, readonly) NSString *titleText;
+@property (copy, nonatomic, readonly) NSString *authorText;
+@property (copy, nonatomic, readonly) NSString *categoyrText;
 
 @end

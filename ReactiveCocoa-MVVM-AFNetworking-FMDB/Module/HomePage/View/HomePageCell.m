@@ -11,8 +11,7 @@
 
 @implementation HomePageCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)setupSignal {
     
     @weakify(self);
     [RACObserve(self, viewModel) subscribeNext:^(HomePageCellViewModel *viewModel) {
@@ -21,6 +20,11 @@
         self.textLabel.text = viewModel.titleText;
         self.detailTextLabel.text = viewModel.authorText;
     }];
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self setupSignal];
 }
 
 @end

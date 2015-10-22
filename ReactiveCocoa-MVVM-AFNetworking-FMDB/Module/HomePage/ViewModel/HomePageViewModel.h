@@ -16,6 +16,6 @@
 @property (strong, nonatomic) RACSignal *requestSignal;
 
 @property (assign, nonatomic) NSInteger currentPage;
-@property (strong, nonatomic) NSArray *articles;
+@property (strong, nonatomic) NSArray *dataSource;
 
 @end

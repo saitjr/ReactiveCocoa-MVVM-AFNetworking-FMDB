@@ -21,7 +21,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="osg-rB-CNB" customClass="HomePageCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="osg-rB-CNB" customClass="HomePageCell">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="osg-rB-CNB" id="Vlp-AK-tGI">
@@ -30,8 +30,13 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <accessibility key="accessibilityConfiguration" identifier=""/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ogv-yt-bht"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="81F-6q-JKb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
