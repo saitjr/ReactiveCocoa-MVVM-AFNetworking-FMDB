@@ -20,6 +20,8 @@
 		9679AF6E1BD7ED010099BA74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9679AF6C1BD7ED010099BA74 /* Main.storyboard */; };
 		9679AF701BD7ED010099BA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9679AF6F1BD7ED010099BA74 /* Assets.xcassets */; };
 		9679AF731BD7ED010099BA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9679AF711BD7ED010099BA74 /* LaunchScreen.storyboard */; };
+		968EDD861BD8DB0B00CA74F1 /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD851BD8DB0B00CA74F1 /* RequestViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		968EDD891BD8DB5900CA74F1 /* HomePageCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD881BD8DB5900CA74F1 /* HomePageCellViewModel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,11 @@
 		9679AF6F1BD7ED010099BA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9679AF721BD7ED010099BA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9679AF741BD7ED010099BA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968EDD831BD8D46E00CA74F1 /* SQLInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLInterface.h; sourceTree = "<group>"; };
+		968EDD841BD8DB0B00CA74F1 /* RequestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewModel.h; sourceTree = "<group>"; };
+		968EDD851BD8DB0B00CA74F1 /* RequestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewModel.m; sourceTree = "<group>"; };
+		968EDD871BD8DB5900CA74F1 /* HomePageCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCellViewModel.h; sourceTree = "<group>"; };
+		968EDD881BD8DB5900CA74F1 /* HomePageCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCellViewModel.m; sourceTree = "<group>"; };
 		B0AAEF9031429E17B38C7BD6 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D824172A1F84678954D8A234 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +136,8 @@
 			children = (
 				962932801BD8ACE80087B14B /* BaseViewModel.h */,
 				962932811BD8ACE80087B14B /* BaseViewModel.m */,
+				968EDD841BD8DB0B00CA74F1 /* RequestViewModel.h */,
+				968EDD851BD8DB0B00CA74F1 /* RequestViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -166,6 +175,8 @@
 			children = (
 				962932861BD8AF050087B14B /* HomePageViewModel.h */,
 				962932871BD8AF050087B14B /* HomePageViewModel.m */,
+				968EDD871BD8DB5900CA74F1 /* HomePageCellViewModel.h */,
+				968EDD881BD8DB5900CA74F1 /* HomePageCellViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 			children = (
 				9679AF661BD7ED010099BA74 /* AppDelegate.h */,
 				9679AF671BD7ED010099BA74 /* AppDelegate.m */,
+				968EDD7F1BD8D40500CA74F1 /* Interface */,
 				962932741BD8AC930087B14B /* Module */,
 				962932721BD8AC930087B14B /* Model */,
 				962932941BD8B21B0087B14B /* Configuration */,
@@ -235,6 +247,14 @@
 				9679AF641BD7ED010099BA74 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		968EDD7F1BD8D40500CA74F1 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				968EDD831BD8D46E00CA74F1 /* SQLInterface.h */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,11 +382,13 @@
 				9629328C1BD8B0A90087B14B /* BaseModel.m in Sources */,
 				9629327F1BD8ACD10087B14B /* BaseViewController.m in Sources */,
 				962932851BD8AD950087B14B /* HomePageViewController.m in Sources */,
+				968EDD861BD8DB0B00CA74F1 /* RequestViewModel.m in Sources */,
 				962932921BD8B10B0087B14B /* HomePageCell.m in Sources */,
 				9629328F1BD8B0BE0087B14B /* ArticleModel.m in Sources */,
 				9679AF681BD7ED010099BA74 /* AppDelegate.m in Sources */,
 				9679AF651BD7ED010099BA74 /* main.m in Sources */,
 				962932821BD8ACE80087B14B /* BaseViewModel.m in Sources */,
+				968EDD891BD8DB5900CA74F1 /* HomePageCellViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

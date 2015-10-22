@@ -6,8 +6,16 @@
 //  Copyright © 2015 tangjr. All rights reserved.
 //
 
-#import "BaseViewModel.h"
+#import "RequestViewModel.h"
+#import "ArticleModel.h"
+#import "SQLInterface.h"
+#import <ReactiveCocoa.h>
 
-@interface HomePageViewModel : BaseViewModel
+@interface HomePageViewModel : RequestViewModel <SQLInterface>
+
+@property (strong, nonatomic) RACSignal *requestSignal;
+
+@property (assign, nonatomic) NSInteger currentPage;
+@property (strong, nonatomic) NSArray *articles;
 
 @end

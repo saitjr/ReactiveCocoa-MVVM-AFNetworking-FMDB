@@ -7,7 +7,6 @@
         <!--首页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController title="首页" id="BYZ-38-t0r" customClass="HomePageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -45,7 +44,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="4UI-xE-Zaz"/>
+                    <connections>
+                        <outlet property="tableView" destination="2bx-Zd-a1H" id="Z6n-7p-TjY"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2045" y="398"/>
         </scene>
