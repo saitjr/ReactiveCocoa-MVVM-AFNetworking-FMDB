@@ -7,7 +7,6 @@ pod 'ReactiveCocoa', '2.4.7'
 pod 'AFNetworking', '2.6.1'
 pod 'FMDB', '2.5'
 pod 'MJExtension', '2.5.14'
-pod 'MJRefresh'
 
 end
 

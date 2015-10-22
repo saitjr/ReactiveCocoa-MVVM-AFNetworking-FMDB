@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MJRefresh.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E7796F00D94BEEF939D4650EBBBA735</key>
+		<key>223437FAA11A9E9235E949D830FA9ABA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6117936DF51B7366F849EA461D3C6B35</key>
+		<key>5DB3904D59CC26892225FAE3E77217A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>741D886CA27F231D43B2AD8BA44943D0</key>
+		<key>9BCFAC5377856A70835181B32D94D385</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>764E7B52A1647A18AD5999CFA449E422</key>
+		<key>FC6A6C81F84F9AA5D5C61EB98824F1C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9BA15FA81E99EE8073D04CAFB99D05B0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D4127F352BECBCCA9DB98ACA41047109</key>
+		<key>FE2E64B5FB1CB0CB9A16163CFB9A86B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

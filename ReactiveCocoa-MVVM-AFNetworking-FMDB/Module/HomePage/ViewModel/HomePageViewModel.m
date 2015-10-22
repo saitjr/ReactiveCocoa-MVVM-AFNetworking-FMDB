@@ -38,7 +38,7 @@
                 break;
             }
         }
-        if (isSuccess) {
+        if (!isSuccess) {
             *rollback = YES;
             return;
         }

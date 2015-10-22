@@ -23,6 +23,7 @@
 		968EDD861BD8DB0B00CA74F1 /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD851BD8DB0B00CA74F1 /* RequestViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		968EDD891BD8DB5900CA74F1 /* HomePageCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD881BD8DB5900CA74F1 /* HomePageCellViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		968EDD8C1BD9063900CA74F1 /* FMDatabaseQueue+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD8B1BD9063900CA74F1 /* FMDatabaseQueue+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		968EDD9B1BD93B5D00CA74F1 /* NotificationNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD9A1BD93B5D00CA74F1 /* NotificationNames.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		968EDD8B1BD9063900CA74F1 /* FMDatabaseQueue+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabaseQueue+Extension.m"; sourceTree = "<group>"; };
 		968EDD921BD907B700CA74F1 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 		968EDD931BD90D5900CA74F1 /* SQL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQL.h; sourceTree = "<group>"; };
+		968EDD991BD93B5D00CA74F1 /* NotificationNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationNames.h; sourceTree = "<group>"; };
+		968EDD9A1BD93B5D00CA74F1 /* NotificationNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationNames.m; sourceTree = "<group>"; };
 		B0AAEF9031429E17B38C7BD6 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D824172A1F84678954D8A234 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +212,8 @@
 			children = (
 				968EDD921BD907B700CA74F1 /* define.h */,
 				968EDD931BD90D5900CA74F1 /* SQL.h */,
+				968EDD991BD93B5D00CA74F1 /* NotificationNames.h */,
+				968EDD9A1BD93B5D00CA74F1 /* NotificationNames.m */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				9629328F1BD8B0BE0087B14B /* ArticleModel.m in Sources */,
 				968EDD8C1BD9063900CA74F1 /* FMDatabaseQueue+Extension.m in Sources */,
 				9679AF681BD7ED010099BA74 /* AppDelegate.m in Sources */,
+				968EDD9B1BD93B5D00CA74F1 /* NotificationNames.m in Sources */,
 				9679AF651BD7ED010099BA74 /* main.m in Sources */,
 				962932821BD8ACE80087B14B /* BaseViewModel.m in Sources */,
 				968EDD891BD8DB5900CA74F1 /* HomePageCellViewModel.m in Sources */,

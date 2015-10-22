@@ -26,7 +26,6 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - MJExtension (2.5.14)
-  - MJRefresh (2.4.12)
   - ReactiveCocoa (2.4.7):
     - ReactiveCocoa/UI (= 2.4.7)
   - ReactiveCocoa/Core (2.4.7):
@@ -39,14 +38,12 @@ DEPENDENCIES:
   - AFNetworking (= 2.6.1)
   - FMDB (= 2.5)
   - MJExtension (= 2.5.14)
-  - MJRefresh
   - ReactiveCocoa (= 2.4.7)
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   MJExtension: fb8e6e900fb44c9a7be435ba3d72b7fdf5f0994c
-  MJRefresh: ca8e9589895977df32d379d46e6b8a5450b3ff44
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
 
 COCOAPODS: 0.39.0.beta.4
