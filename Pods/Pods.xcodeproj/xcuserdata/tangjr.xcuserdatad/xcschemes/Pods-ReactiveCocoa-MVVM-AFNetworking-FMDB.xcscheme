@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0CB05E9FF15448E52E7A9D63'
+               BlueprintIdentifier = '03CA25C5499F554B0B08E363'
                BlueprintName = 'Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a'>

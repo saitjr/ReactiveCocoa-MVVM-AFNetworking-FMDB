@@ -34,9 +34,9 @@ PODS:
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.6.1)
-  - FMDB (~> 2.5)
-  - ReactiveCocoa (~> 2.4.7)
+  - AFNetworking (= 2.6.1)
+  - FMDB (= 2.5)
+  - ReactiveCocoa (= 2.4.7)
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399

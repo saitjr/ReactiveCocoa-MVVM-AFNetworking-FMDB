@@ -3,9 +3,9 @@
 
 target 'ReactiveCocoa-MVVM-AFNetworking-FMDB' do
 
-pod 'ReactiveCocoa', '~>2.4.7'
-pod 'AFNetworking', '~>2.6.1'
-pod 'FMDB', '~>2.5'
+pod 'ReactiveCocoa', '2.4.7'
+pod 'AFNetworking', '2.6.1'
+pod 'FMDB', '2.5'
 
 end
 
