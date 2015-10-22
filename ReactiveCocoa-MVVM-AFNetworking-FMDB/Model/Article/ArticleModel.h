@@ -10,6 +10,7 @@
 
 @interface ArticleModel : BaseModel
 
+@property (copy, nonatomic) NSString *articleId;
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *authorname;
 @property (copy, nonatomic) NSString *categoryname;

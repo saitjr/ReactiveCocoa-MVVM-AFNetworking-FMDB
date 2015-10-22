@@ -7,7 +7,13 @@
 //
 
 #import "ArticleModel.h"
+#import <MJExtension.h>
 
 @implementation ArticleModel
+
++ (NSDictionary *)replacedKeyFromPropertyName {
+    
+    return @{@"articleId" : @"id"};
+}
 
 @end

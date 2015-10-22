@@ -12,7 +12,7 @@
 
 @optional
 - (BOOL)saveData;
-- (NSArray *)loadData;
+- (void)loadData;
 - (BOOL)deleteData;
 - (BOOL)updateData;
 

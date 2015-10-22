@@ -10,8 +10,6 @@
 
 @interface HomePageCellViewModel ()
 
-@property (strong, nonatomic) ArticleModel *articleModel;
-
 @end
 
 @implementation HomePageCellViewModel

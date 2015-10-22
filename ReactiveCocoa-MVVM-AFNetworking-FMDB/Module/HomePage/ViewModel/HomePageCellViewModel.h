@@ -11,10 +11,12 @@
 
 @interface HomePageCellViewModel : BaseViewModel
 
-- (instancetype)initWithArticleModel:(ArticleModel *)articleModel;
+@property (strong, nonatomic) ArticleModel *articleModel;
 
 @property (copy, nonatomic, readonly) NSString *titleText;
 @property (copy, nonatomic, readonly) NSString *authorText;
 @property (copy, nonatomic, readonly) NSString *categoyrText;
+
+- (instancetype)initWithArticleModel:(ArticleModel *)articleModel;
 
 @end

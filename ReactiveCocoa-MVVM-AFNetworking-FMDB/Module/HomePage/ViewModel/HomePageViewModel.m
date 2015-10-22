@@ -8,6 +8,8 @@
 
 #import "HomePageViewModel.h"
 #import "HomePageCellViewModel.h"
+#import "FMDatabaseQueue+Extension.h"
+#import "SQL.h"
 #import <MJExtension.h>
 
 @interface HomePageViewModel ()
@@ -18,6 +20,65 @@
 @end
 
 @implementation HomePageViewModel
+
+#pragma mark - SQLInterface
+
+- (BOOL)saveData {
+    
+    __block BOOL isSuccess = NO;
+    
+    [[FMDatabaseQueue shareInstense] inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        
+        for (HomePageCellViewModel *cellViewModel in self.dataSource) {
+            
+            ArticleModel *articleModel = cellViewModel.articleModel;
+            
+            isSuccess = [db executeUpdate:saveArticleSQL, articleModel.articleId, articleModel.title, articleModel.authorname, articleModel.categoryname];
+            if (!isSuccess) {
+                break;
+            }
+        }
+        if (isSuccess) {
+            *rollback = YES;
+            return;
+        }
+    }];
+    
+    return isSuccess;
+}
+
+- (BOOL)deleteData {
+    
+    __block BOOL isSuccess = NO;
+    
+    [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {
+        
+        isSuccess = [db executeUpdate:deleteArticleSQL];
+    }];
+    
+    return isSuccess;
+}
+
+- (void)loadData {
+    
+    [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {
+        
+        FMResultSet *set = [db executeQuery:selectArticleSQL];
+        while ([set next]) {
+            ArticleModel *article = [ArticleModel new];
+            article.title = [set objectForColumnName:@"title"];
+            article.articleId = [set objectForColumnName:@"id"];
+            article.authorname = [set objectForColumnName:@"authorname"];
+            article.categoryname = [set objectForColumnName:@"categoryname"];
+            HomePageCellViewModel *cellViewModel = [[HomePageCellViewModel alloc] initWithArticleModel:article];
+            [self.articleViewModels addObject:cellViewModel];
+        }
+        [set close];
+    }];
+    self.dataSource = [self.articleViewModels copy];
+}
+
+#pragma mark - Getter / Setter
 
 - (RACSignal *)requestSignal {
     
@@ -36,11 +97,19 @@
                     [self.articleViewModels addObject:cellViewModel];
                 }
                 self.dataSource = [self.articleViewModels copy];
+                
+                if (self.isRefresh) {
+                    [self deleteData];
+                }
+                BOOL isSuccess = [self saveData];
+                NSLog(@"%d", isSuccess);
+                
                 [subscriber sendNext:self.dataSource];
                 [subscriber sendCompleted];
             } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
                 
                 [subscriber sendError:error];
+                [self loadData];
             }];
             
             return [RACDisposable disposableWithBlock:^{
@@ -54,7 +123,9 @@
 
 - (BOOL)isRefresh {
     
-    return self.currentPage == 0;
+    _isRefresh = self.currentPage == 0;
+    
+    return _isRefresh;
 }
 
 - (NSMutableArray *)articleViewModels {

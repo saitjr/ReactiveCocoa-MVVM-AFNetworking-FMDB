@@ -24,13 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
  
-//    [self setupTableView];
     [self sendRequest];
-}
-
-- (void)setupTableView {
-    
-    [self.tableView registerClass:[HomePageCell class] forCellReuseIdentifier:@"cell"];
 }
 
 - (void)sendRequest {

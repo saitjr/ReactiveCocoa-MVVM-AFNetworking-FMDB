@@ -11,6 +11,12 @@
 
 @implementation HomePageCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self setupSignal];
+}
+
 - (void)setupSignal {
     
     @weakify(self);
@@ -20,11 +26,6 @@
         self.textLabel.text = viewModel.titleText;
         self.detailTextLabel.text = viewModel.authorText;
     }];
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self setupSignal];
 }
 
 @end
