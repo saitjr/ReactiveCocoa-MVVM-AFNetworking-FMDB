@@ -26,6 +26,8 @@
     return self;
 }
 
+// 处理Model中的数据
+// 这里的处理不是很复杂，仅仅作为例子
 - (void)setupData {
     
     _titleText = self.articleModel.title;

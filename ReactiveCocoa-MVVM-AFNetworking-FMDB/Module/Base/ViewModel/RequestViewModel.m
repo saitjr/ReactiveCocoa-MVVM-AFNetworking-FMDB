@@ -10,6 +10,7 @@
 
 @implementation RequestViewModel
 
+// 懒加载
 - (AFHTTPSessionManager *)sessionManager {
     
     if (!_sessionManager) {
@@ -18,6 +19,7 @@
     return _sessionManager;
 }
 
+// 在对象销毁时，别忘了取消已经在队列中的请求
 - (void)dealloc {
     
     [self.sessionManager invalidateSessionCancelingTasks:YES];

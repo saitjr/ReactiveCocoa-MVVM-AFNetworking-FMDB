@@ -25,6 +25,7 @@
     return YES;
 }
 
+// 创建需要的表
 - (void)configFMDBTables {
     
     [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {

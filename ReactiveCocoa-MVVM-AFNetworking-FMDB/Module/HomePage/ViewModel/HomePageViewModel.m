@@ -14,8 +14,8 @@
 
 @interface HomePageViewModel ()
 
-@property (strong, nonatomic) NSMutableArray *articleViewModels;
-@property (assign, nonatomic) BOOL isRefresh;
+@property (strong, nonatomic) NSMutableArray *articleViewModels; ///< 这个属性主要存储的是文章的vm，上拉加载的时候追加，下拉刷新的时候清空。防止直接修改dataSource
+@property (assign, nonatomic) BOOL isRefresh; ///< 是否是刷新(用于处理数据缓存与dataSource)
 
 @end
 
@@ -25,19 +25,24 @@
 
 - (BOOL)saveData {
     
+    // 需要在block中进行修改变量值，所以用__block修饰
     __block BOOL isSuccess = NO;
     
+    // 批量操作，选择事务
     [[FMDatabaseQueue shareInstense] inTransaction:^(FMDatabase *db, BOOL *rollback) {
         
         for (HomePageCellViewModel *cellViewModel in self.dataSource) {
             
             ArticleModel *articleModel = cellViewModel.articleModel;
             
+            // 存储
             isSuccess = [db executeUpdate:saveArticleSQL, articleModel.articleId, articleModel.title, articleModel.authorname, articleModel.categoryname];
+            // 如果有失败，则停止，跳出循环
             if (!isSuccess) {
                 break;
             }
         }
+        // 如果遇到失败，则回滚，存储失败
         if (!isSuccess) {
             *rollback = YES;
             return;
@@ -63,7 +68,10 @@
     
     [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {
         
+        // 读取数据
         FMResultSet *set = [db executeQuery:selectArticleSQL];
+        
+        // 循环读取，直到读完
         while ([set next]) {
             ArticleModel *article = [ArticleModel new];
             article.title = [set objectForColumnName:@"title"];
@@ -73,45 +81,58 @@
             HomePageCellViewModel *cellViewModel = [[HomePageCellViewModel alloc] initWithArticleModel:article];
             [self.articleViewModels addObject:cellViewModel];
         }
+        // 关闭结果集
         [set close];
     }];
+    // 读取完后重新赋值给dataSource
     self.dataSource = [self.articleViewModels copy];
 }
 
 #pragma mark - Getter / Setter
 
+// 采用懒加载的方式来配置网络请求
 - (RACSignal *)requestSignal {
     
     if (!_requestSignal) {
         
         _requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
+            // 配置网络请求参数
             NSDictionary *parameters = @{@"page": @(self.currentPage)};
             
+            // 发起请求
             NSURLSessionDataTask *task = [self.sessionManager POST:@"http://www.brighttj.com/api/index.php/api/article/articleList" parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                 
+                // 将请求下来的字典->模型
                 NSArray *articleArray = responseObject[@"data"][@"articleList"];
                 for (NSDictionary *articleDictionary in articleArray) {
                     ArticleModel *articleModel = [ArticleModel objectWithKeyValues:articleDictionary];
+                    // 根据模型，初始化cell的vm
                     HomePageCellViewModel *cellViewModel = [[HomePageCellViewModel alloc] initWithArticleModel:articleModel];
+                    // 将cell的vm存入数组
                     [self.articleViewModels addObject:cellViewModel];
                 }
+                // 完成数据处理后，赋值给dataSource
                 self.dataSource = [self.articleViewModels copy];
                 
+                // 如果是刷新操作，则删除数据库中的旧数据
+                // 这里也可以采用存入部分新数据的方式，全部删除可能在效率方面不是很好
                 if (self.isRefresh) {
                     [self deleteData];
                 }
-                BOOL isSuccess = [self saveData];
-                NSLog(@"%d", isSuccess);
+                // 存入新数据
+                [self saveData];
                 
                 [subscriber sendNext:self.dataSource];
                 [subscriber sendCompleted];
             } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
                 
                 [subscriber sendError:error];
+                // 如果网络请求出错，则加载数据库中的旧数据
                 [self loadData];
             }];
             
+            // 在信号量作废时，取消网络氢气
             return [RACDisposable disposableWithBlock:^{
                 
                 [task cancel];

@@ -9,6 +9,8 @@
 #import "BaseViewModel.h"
 #import "ArticleModel.h"
 
+// cell的vm
+// 无需网络请求，所以继承BaseViewModel即可
 @interface HomePageCellViewModel : BaseViewModel
 
 @property (strong, nonatomic) ArticleModel *articleModel;

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// 项目中执行的SQL
+
 static NSString * const createArticleSQL = @"CREATE TABLE IF NOT EXISTS article (id INT, title VARCHAR, authorname VARCHAR, categoryname VARCHAR)";
 
 static NSString * const saveArticleSQL = @"INSERT INTO article VALUES (?, ?, ?, ?)";

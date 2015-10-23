@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+// vm
 @property (strong, nonatomic) HomePageViewModel *viewModel;
 
 @end
@@ -23,20 +24,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
- 
+
     [self sendRequest];
 }
 
+// 发起请求
 - (void)sendRequest {
     
     @weakify(self);
     [self.viewModel.requestSignal subscribeNext:^(NSArray *articles) {
         
         @strongify(self);
+        // 请求完成后，刷新表格
         [self.tableView reloadData];
     } error:^(NSError *error) {
         
-        
+        // 如果请求失败，则根据error做出相应提示
     }];
 }
 
@@ -51,6 +54,8 @@
 
 - (void)configCell:(HomePageCell *)cell indexPath:(NSIndexPath *)indexPath {
     
+    // 将数据赋值给cell的vm
+    // cell接收到vm修改以后，就会触发初始时设置的信号量
     cell.viewModel = self.viewModel.dataSource[indexPath.row];
 }
 

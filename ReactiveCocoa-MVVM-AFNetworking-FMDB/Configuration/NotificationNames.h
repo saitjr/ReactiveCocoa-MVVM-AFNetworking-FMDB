@@ -8,4 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
+// 通知名称定义
+
 UIKIT_EXTERN NSString * const LoadAllNotification;

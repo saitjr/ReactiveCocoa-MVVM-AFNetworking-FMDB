@@ -11,6 +11,7 @@
 
 @interface HomePageCell : UITableViewCell
 
+// cell的VM
 @property (strong, nonatomic) HomePageCellViewModel *viewModel;
 
 @end

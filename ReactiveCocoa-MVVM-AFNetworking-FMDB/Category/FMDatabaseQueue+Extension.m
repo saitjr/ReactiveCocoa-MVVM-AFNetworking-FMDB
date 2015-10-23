@@ -19,6 +19,7 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        // 根据路径，创建数据库
         queue = [FMDatabaseQueue databaseQueueWithPath:DB_PATH];
     });
     

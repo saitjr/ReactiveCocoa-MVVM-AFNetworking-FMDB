@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// ViewModel基类
 @interface BaseViewModel : NSObject
 
 @end

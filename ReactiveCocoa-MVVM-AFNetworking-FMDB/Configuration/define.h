@@ -6,6 +6,8 @@
 //  Copyright © 2015 tangjr. All rights reserved.
 //
 
+// 一些常用方法的宏定义，摘自MVVMReactiveCocoa
+
 #define ST_DOCUMENT_DIRECTORY NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
 
 #define ST_APP_NAME    ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
