@@ -95,7 +95,10 @@
     
     if (!_requestSignal) {
         
+        @weakify(self);
         _requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            
+            @strongify(self);
             
             // 配置网络请求参数
             NSDictionary *parameters = @{@"page": @(self.currentPage)};
