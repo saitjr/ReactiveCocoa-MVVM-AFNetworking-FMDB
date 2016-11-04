@@ -278,12 +278,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9679AF771BD7ED010099BA74 /* Build configuration list for PBXNativeTarget "ReactiveCocoa-MVVM-AFNetworking-FMDB" */;
 			buildPhases = (
-				6949A7ABD0660039F2C53025 /* [CP] Check Pods Manifest.lock */,
 				9679AF5C1BD7ED010099BA74 /* Sources */,
 				9679AF5D1BD7ED010099BA74 /* Frameworks */,
 				9679AF5E1BD7ED010099BA74 /* Resources */,
-				7C610236BDB05C48B4491726 /* [CP] Embed Pods Frameworks */,
-				2C14DC82A0AC2A08F7E609AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -338,54 +335,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2C14DC82A0AC2A08F7E609AF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6949A7ABD0660039F2C53025 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7C610236BDB05C48B4491726 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9679AF5C1BD7ED010099BA74 /* Sources */ = {
