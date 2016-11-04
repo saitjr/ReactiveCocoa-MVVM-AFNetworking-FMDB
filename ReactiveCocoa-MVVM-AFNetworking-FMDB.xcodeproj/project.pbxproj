@@ -7,27 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56FCC9B11BC9CA876732E75E /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AAEF9031429E17B38C7BD6 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */; };
-		9629327F1BD8ACD10087B14B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629327E1BD8ACD10087B14B /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		962932821BD8ACE80087B14B /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932811BD8ACE80087B14B /* BaseViewModel.m */; settings = {ASSET_TAGS = (); }; };
-		962932851BD8AD950087B14B /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932841BD8AD950087B14B /* HomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		962932881BD8AF050087B14B /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932871BD8AF050087B14B /* HomePageViewModel.m */; settings = {ASSET_TAGS = (); }; };
-		9629328C1BD8B0A90087B14B /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629328B1BD8B0A90087B14B /* BaseModel.m */; settings = {ASSET_TAGS = (); }; };
-		9629328F1BD8B0BE0087B14B /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629328E1BD8B0BE0087B14B /* ArticleModel.m */; settings = {ASSET_TAGS = (); }; };
-		962932921BD8B10B0087B14B /* HomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932911BD8B10B0087B14B /* HomePageCell.m */; settings = {ASSET_TAGS = (); }; };
+		18643FD06147635827F19B20 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5617D7D92C1E2857FDB5E2 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */; };
+		9629327F1BD8ACD10087B14B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629327E1BD8ACD10087B14B /* BaseViewController.m */; };
+		962932821BD8ACE80087B14B /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932811BD8ACE80087B14B /* BaseViewModel.m */; };
+		962932851BD8AD950087B14B /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932841BD8AD950087B14B /* HomePageViewController.m */; };
+		962932881BD8AF050087B14B /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932871BD8AF050087B14B /* HomePageViewModel.m */; };
+		9629328C1BD8B0A90087B14B /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629328B1BD8B0A90087B14B /* BaseModel.m */; };
+		9629328F1BD8B0BE0087B14B /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629328E1BD8B0BE0087B14B /* ArticleModel.m */; };
+		962932921BD8B10B0087B14B /* HomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932911BD8B10B0087B14B /* HomePageCell.m */; };
 		9679AF651BD7ED010099BA74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679AF641BD7ED010099BA74 /* main.m */; };
 		9679AF681BD7ED010099BA74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679AF671BD7ED010099BA74 /* AppDelegate.m */; };
 		9679AF6E1BD7ED010099BA74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9679AF6C1BD7ED010099BA74 /* Main.storyboard */; };
 		9679AF701BD7ED010099BA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9679AF6F1BD7ED010099BA74 /* Assets.xcassets */; };
 		9679AF731BD7ED010099BA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9679AF711BD7ED010099BA74 /* LaunchScreen.storyboard */; };
-		968EDD861BD8DB0B00CA74F1 /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD851BD8DB0B00CA74F1 /* RequestViewModel.m */; settings = {ASSET_TAGS = (); }; };
-		968EDD891BD8DB5900CA74F1 /* HomePageCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD881BD8DB5900CA74F1 /* HomePageCellViewModel.m */; settings = {ASSET_TAGS = (); }; };
-		968EDD8C1BD9063900CA74F1 /* FMDatabaseQueue+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD8B1BD9063900CA74F1 /* FMDatabaseQueue+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		968EDD9B1BD93B5D00CA74F1 /* NotificationNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD9A1BD93B5D00CA74F1 /* NotificationNames.m */; settings = {ASSET_TAGS = (); }; };
+		968EDD861BD8DB0B00CA74F1 /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD851BD8DB0B00CA74F1 /* RequestViewModel.m */; };
+		968EDD891BD8DB5900CA74F1 /* HomePageCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD881BD8DB5900CA74F1 /* HomePageCellViewModel.m */; };
+		968EDD8C1BD9063900CA74F1 /* FMDatabaseQueue+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD8B1BD9063900CA74F1 /* FMDatabaseQueue+Extension.m */; };
+		968EDD9B1BD93B5D00CA74F1 /* NotificationNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EDD9A1BD93B5D00CA74F1 /* NotificationNames.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B2784C02C41FA43734317A4 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig"; sourceTree = "<group>"; };
+		34735F8AAA361A0E6B3FBB5D /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; sourceTree = "<group>"; };
+		954A0A8FCAC102DB4A39DC22 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig"; sourceTree = "<group>"; };
 		9629327D1BD8ACD10087B14B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		9629327E1BD8ACD10087B14B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		962932801BD8ACE80087B14B /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
@@ -61,8 +62,7 @@
 		968EDD931BD90D5900CA74F1 /* SQL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQL.h; sourceTree = "<group>"; };
 		968EDD991BD93B5D00CA74F1 /* NotificationNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationNames.h; sourceTree = "<group>"; };
 		968EDD9A1BD93B5D00CA74F1 /* NotificationNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationNames.m; sourceTree = "<group>"; };
-		B0AAEF9031429E17B38C7BD6 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D824172A1F84678954D8A234 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; sourceTree = "<group>"; };
+		FE5617D7D92C1E2857FDB5E2 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,26 +70,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56FCC9B11BC9CA876732E75E /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a in Frameworks */,
+				18643FD06147635827F19B20 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		46C97C9B7CC811B23A3CDC7A /* Frameworks */ = {
+		3D9762975BFDAFEFD8A17395 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B0AAEF9031429E17B38C7BD6 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		74CCF283E56950534C743A02 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D824172A1F84678954D8A234 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */,
-				5B2784C02C41FA43734317A4 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig */,
+				34735F8AAA361A0E6B3FBB5D /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */,
+				954A0A8FCAC102DB4A39DC22 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -223,8 +215,8 @@
 			children = (
 				9679AF621BD7ED010099BA74 /* ReactiveCocoa-MVVM-AFNetworking-FMDB */,
 				9679AF611BD7ED010099BA74 /* Products */,
-				74CCF283E56950534C743A02 /* Pods */,
-				46C97C9B7CC811B23A3CDC7A /* Frameworks */,
+				3D9762975BFDAFEFD8A17395 /* Pods */,
+				AEB082F248A12C34227626E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +263,14 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
+		AEB082F248A12C34227626E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE5617D7D92C1E2857FDB5E2 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,12 +278,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9679AF771BD7ED010099BA74 /* Build configuration list for PBXNativeTarget "ReactiveCocoa-MVVM-AFNetworking-FMDB" */;
 			buildPhases = (
-				C37F319B0834D11A0D514288 /* Check Pods Manifest.lock */,
+				6949A7ABD0660039F2C53025 /* [CP] Check Pods Manifest.lock */,
 				9679AF5C1BD7ED010099BA74 /* Sources */,
 				9679AF5D1BD7ED010099BA74 /* Frameworks */,
 				9679AF5E1BD7ED010099BA74 /* Resources */,
-				59A5E861781D00F47A7326CE /* Embed Pods Frameworks */,
-				ABDA5152DF6C8B8C18D98B04 /* Copy Pods Resources */,
+				7C610236BDB05C48B4491726 /* [CP] Embed Pods Frameworks */,
+				2C14DC82A0AC2A08F7E609AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,29 +340,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		59A5E861781D00F47A7326CE /* Embed Pods Frameworks */ = {
+		2C14DC82A0AC2A08F7E609AF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ABDA5152DF6C8B8C18D98B04 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,19 +355,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C37F319B0834D11A0D514288 /* Check Pods Manifest.lock */ = {
+		6949A7ABD0660039F2C53025 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C610236BDB05C48B4491726 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -512,7 +512,7 @@
 		};
 		9679AF781BD7ED010099BA74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D824172A1F84678954D8A234 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */;
+			baseConfigurationReference = 34735F8AAA361A0E6B3FBB5D /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ReactiveCocoa-MVVM-AFNetworking-FMDB/Info.plist";
@@ -524,7 +524,7 @@
 		};
 		9679AF791BD7ED010099BA74 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B2784C02C41FA43734317A4 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig */;
+			baseConfigurationReference = 954A0A8FCAC102DB4A39DC22 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ReactiveCocoa-MVVM-AFNetworking-FMDB/Info.plist";

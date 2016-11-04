@@ -38,7 +38,6 @@
         // 请求完成后，刷新表格
         [self.tableView reloadData];
     } error:^(NSError *error) {
-        
         // 如果请求失败，则根据error做出相应提示
     }];
 }

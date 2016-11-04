@@ -28,7 +28,7 @@
         
         // vm已经将要显示的文本处理好了，在cell中直接赋值就行
         self.textLabel.text = viewModel.titleText;
-        self.detailTextLabel.text = viewModel.authorText;
+        self.detailTextLabel.text = viewModel.idText;
     }];
 }
 

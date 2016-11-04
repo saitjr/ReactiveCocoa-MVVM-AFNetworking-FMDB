@@ -10,8 +10,8 @@
 
 // 项目中执行的SQL
 
-static NSString * const createArticleSQL = @"CREATE TABLE IF NOT EXISTS article (id INT, title VARCHAR, authorname VARCHAR, categoryname VARCHAR)";
+static NSString * const createArticleSQL = @"CREATE TABLE IF NOT EXISTS article (id INT, title VARCHAR)";
 
-static NSString * const saveArticleSQL = @"INSERT INTO article VALUES (?, ?, ?, ?)";
+static NSString * const saveArticleSQL = @"INSERT INTO article VALUES (?, ?)";
 static NSString * const deleteArticleSQL = @"DELETE FROM article";
 static NSString * const selectArticleSQL = @"SELECT * FROM article";

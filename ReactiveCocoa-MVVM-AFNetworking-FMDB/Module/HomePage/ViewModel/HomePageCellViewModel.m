@@ -29,10 +29,8 @@
 // 处理Model中的数据
 // 这里的处理不是很复杂，仅仅作为例子
 - (void)setupData {
-    
     _titleText = self.articleModel.title;
-    _authorText = self.articleModel.authorname;
-    _categoyrText = [@"分类:" stringByAppendingString:self.articleModel.categoryname];
+    _idText = self.articleModel.articleId.stringValue;
 }
 
 @end

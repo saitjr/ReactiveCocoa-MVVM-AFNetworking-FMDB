@@ -16,8 +16,7 @@
 @property (strong, nonatomic) ArticleModel *articleModel;
 
 @property (copy, nonatomic, readonly) NSString *titleText;
-@property (copy, nonatomic, readonly) NSString *authorText;
-@property (copy, nonatomic, readonly) NSString *categoyrText;
+@property (copy, nonatomic, readonly) NSString *idText;
 
 - (instancetype)initWithArticleModel:(ArticleModel *)articleModel;
 
