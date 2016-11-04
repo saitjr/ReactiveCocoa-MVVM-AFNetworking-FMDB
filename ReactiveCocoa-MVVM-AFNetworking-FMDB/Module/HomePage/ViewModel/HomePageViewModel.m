@@ -128,12 +128,13 @@
                 [subscriber sendCompleted];
             } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
                 
-                [subscriber sendError:error];
                 // 如果网络请求出错，则加载数据库中的旧数据
                 [self loadData];
+                [subscriber sendNext:self.dataSource];
+                [subscriber sendError:error];
             }];
             
-            // 在信号量作废时，取消网络氢气
+            // 在信号量作废时，取消网络请求
             return [RACDisposable disposableWithBlock:^{
                 
                 [task cancel];

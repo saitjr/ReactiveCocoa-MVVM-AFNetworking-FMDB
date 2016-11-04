@@ -15,6 +15,7 @@
     
     if (!_sessionManager) {
         _sessionManager = [AFHTTPSessionManager manager];
+        _sessionManager.requestSerializer.timeoutInterval = 5;
     }
     return _sessionManager;
 }

@@ -18,6 +18,7 @@
 @interface HomePageViewModel : RequestViewModel <SQLInterface>
 
 @property (strong, nonatomic) RACSignal *requestSignal; ///< 网络请求信号量
+@property (nonatomic, strong) RACSignal *loadDataSignal; ///< 加载本地数据信号量
 
 @property (assign, nonatomic) NSInteger currentPage; ///< 当前页码
 @property (strong, nonatomic) NSArray *dataSource; ///< tableView的数据源
