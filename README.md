@@ -4,7 +4,7 @@ ReactiveCocoa-MVVM-AFNetworking-FMDB小项目框架设计。需要自行 `pod in
 
 详细介绍见：
 
->   [小项目框架设计(ReactiveCocoa+MVVM+AFNetworking+FMDB)](http://www.brighttj.com/ios/ios-framework-reactivecocoa-mvvmafnetworking-fmdb.html)
+>   [小项目框架设计(ReactiveCocoa+MVVM+AFNetworking+FMDB)](http://www.saitjr.com/ios/ios-framework-reactivecocoa-mvvmafnetworking-fmdb.html)
 
 ## 工程目录
 
