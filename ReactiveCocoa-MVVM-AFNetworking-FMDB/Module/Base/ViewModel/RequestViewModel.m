@@ -15,7 +15,8 @@
     
     if (!_sessionManager) {
         _sessionManager = [AFHTTPSessionManager manager];
-        _sessionManager.requestSerializer.timeoutInterval = 5;
+        _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
+        _sessionManager.requestSerializer.timeoutInterval = 30;
     }
     return _sessionManager;
 }

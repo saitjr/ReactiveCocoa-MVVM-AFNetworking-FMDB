@@ -36,7 +36,7 @@
             ArticleModel *articleModel = cellViewModel.articleModel;
             
             // 存储
-            isSuccess = [db executeUpdate:saveArticleSQL, articleModel.articleId, articleModel.title];
+            isSuccess = [db executeUpdate:saveArticleSQL, articleModel.articleID, articleModel.title, articleModel.subtitle];
             // 如果有失败，则停止，跳出循环
             if (!isSuccess) {
                 break;
@@ -75,7 +75,8 @@
         while ([set next]) {
             ArticleModel *article = [ArticleModel new];
             article.title = [set objectForColumnName:@"title"];
-            article.articleId = [set objectForColumnName:@"id"];
+            article.articleID = [set objectForColumnName:@"id"];
+            article.subtitle = [set objectForColumnName:@"subtitle"];
             HomePageCellViewModel *cellViewModel = [[HomePageCellViewModel alloc] initWithArticleModel:article];
             [self.articleViewModels addObject:cellViewModel];
         }
@@ -102,10 +103,14 @@
             NSDictionary *parameters = @{@"page": @(self.currentPage)};
             
             // 发起请求
-            NSURLSessionDataTask *task = [self.sessionManager GET:@"https://s0.jianshuapi.com/v2/trending/daily.json?app%5Bname%5D=hugo&app%5Bversion%5D=2.11.2&auth1=8505f184ed6b87f1ffa152474174c17c&count=10&device%5Bguid%5D=63926467-1049-49DF-8CDA-15D8E596E742&limit=10&page=1&timestamp=1478249390" parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+            NSURLSessionDataTask *task = [self.sessionManager GET:@"http://www.saitjr.com/api_for_test/static_article_list.php" parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+                // 可封装为请求正确，但是校验未通过处理
+                if ([responseObject[@"code"] integerValue] != RequestErrorCode_None) {
+                    return;
+                }
                 
                 // 将请求下来的字典->模型
-                NSArray *articleArray = responseObject;
+                NSArray *articleArray = responseObject[@"data"];
                 for (NSDictionary *articleDictionary in articleArray) {
                     ArticleModel *articleModel = [ArticleModel objectWithKeyValues:articleDictionary];
                     // 根据模型，初始化cell的vm

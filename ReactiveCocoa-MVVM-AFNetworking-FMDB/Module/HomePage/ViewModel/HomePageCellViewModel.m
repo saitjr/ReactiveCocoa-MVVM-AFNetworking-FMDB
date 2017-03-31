@@ -30,7 +30,8 @@
 // 这里的处理不是很复杂，仅仅作为例子
 - (void)setupData {
     _titleText = self.articleModel.title;
-    _idText = self.articleModel.articleId.stringValue;
+    _subtitleText = self.articleModel.subtitle;
+    _idText = self.articleModel.articleID.stringValue;
 }
 
 @end

@@ -11,10 +11,4 @@
 
 @implementation ArticleModel
 
-// MJExtension中替换属性名称的方法
-+ (NSDictionary *)replacedKeyFromPropertyName {
-    
-    return @{@"articleId" : @"id"};
-}
-
 @end
