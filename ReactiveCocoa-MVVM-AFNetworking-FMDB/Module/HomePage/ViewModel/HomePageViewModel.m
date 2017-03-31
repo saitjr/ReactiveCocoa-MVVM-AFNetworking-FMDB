@@ -10,6 +10,7 @@
 #import "HomePageCellViewModel.h"
 #import "FMDatabaseQueue+Extension.h"
 #import "SQL.h"
+#import "CFunctions.h"
 #import <MJExtension.h>
 
 @interface HomePageViewModel ()
@@ -105,7 +106,9 @@
             // 发起请求
             NSURLSessionDataTask *task = [self.sessionManager GET:@"http://www.saitjr.com/api_for_test/static_article_list.php" parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                 // 可封装为请求正确，但是校验未通过处理
-                if ([responseObject[@"code"] integerValue] != RequestErrorCode_None) {
+                if ([responseObject[@"code"] integerValue] == RequestErrorCode_NoData) {
+                    [subscriber sendNext:nil];
+                    [subscriber sendError:GlobalError(GlobalErrorType_Request, @"没数据啦")];
                     return;
                 }
                 
@@ -136,7 +139,7 @@
                 // 如果网络请求出错，则加载数据库中的旧数据
                 [self loadData];
                 [subscriber sendNext:self.dataSource];
-                [subscriber sendError:error];
+                [subscriber sendError:GlobalError(GlobalErrorType_Request, @"网络错误")];
             }];
             
             // 在信号量作废时，取消网络请求

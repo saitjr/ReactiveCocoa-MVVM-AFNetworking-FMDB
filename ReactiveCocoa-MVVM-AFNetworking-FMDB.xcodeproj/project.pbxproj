@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0926E6661E8EB52A0097681A /* CFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0926E6651E8EB52A0097681A /* CFunctions.m */; };
 		18643FD06147635827F19B20 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5617D7D92C1E2857FDB5E2 /* libPods-ReactiveCocoa-MVVM-AFNetworking-FMDB.a */; };
 		9629327F1BD8ACD10087B14B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629327E1BD8ACD10087B14B /* BaseViewController.m */; };
 		962932821BD8ACE80087B14B /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 962932811BD8ACE80087B14B /* BaseViewModel.m */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0926E6641E8EB52A0097681A /* CFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFunctions.h; sourceTree = "<group>"; };
+		0926E6651E8EB52A0097681A /* CFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFunctions.m; sourceTree = "<group>"; };
 		34735F8AAA361A0E6B3FBB5D /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.debug.xcconfig"; sourceTree = "<group>"; };
 		954A0A8FCAC102DB4A39DC22 /* Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB/Pods-ReactiveCocoa-MVVM-AFNetworking-FMDB.release.xcconfig"; sourceTree = "<group>"; };
 		9629327D1BD8ACD10087B14B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				968EDD931BD90D5900CA74F1 /* SQL.h */,
 				968EDD991BD93B5D00CA74F1 /* NotificationNames.h */,
 				968EDD9A1BD93B5D00CA74F1 /* NotificationNames.m */,
+				0926E6641E8EB52A0097681A /* CFunctions.h */,
+				0926E6651E8EB52A0097681A /* CFunctions.m */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				9679AF651BD7ED010099BA74 /* main.m in Sources */,
 				962932821BD8ACE80087B14B /* BaseViewModel.m in Sources */,
 				968EDD891BD8DB5900CA74F1 /* HomePageCellViewModel.m in Sources */,
+				0926E6661E8EB52A0097681A /* CFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

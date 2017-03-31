@@ -9,6 +9,7 @@
 #import "HomePageViewController.h"
 #import "HomePageViewModel.h"
 #import "HomePageCell.h"
+#import "CFunctions.h"
 
 @interface HomePageViewController () <UITableViewDataSource>
 
@@ -39,6 +40,12 @@
         [self.tableView reloadData];
     } error:^(NSError *error) {
         // 如果请求失败，则根据error做出相应提示
+        NSString *msg = [[error userInfo] objectForKey:GlobalErrorMessageKey];
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:NULL];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:msg preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:NULL];
     }];
 }
 
